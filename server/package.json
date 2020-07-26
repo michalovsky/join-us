@@ -1,0 +1,12 @@
+{
+    "dependencies": {
+        "express": "*",
+        "mysql": "*",
+        "ejs": "*",
+        "faker": "*",
+        "body-parser": "*"
+    },
+    "scripts":{
+        "start": "node index.js"
+    }
+}

@@ -2,10 +2,10 @@ FROM node:alpine
 
 WORKDIR /app
 
+COPY package.json ./
+
 RUN npm install
-RUN npm install faker
-RUN npm install mysql
 
 COPY ./ ./
 
-CMD ["node", "app.js"]
+CMD ["npm", "start"]

@@ -21,14 +21,9 @@ services:
         build:
             dockerfile: Dockerfile
             context: ./server
+        restart: on-failure
         volumes:
             - /app/node_modules
             - ./server:/app
-        # environment: 
-            # - REDIS_HOST=redis
-            # - REDIS_PORT=6379
-            # - PGUSER=postgres #default user
-            # - PGHOST=postgres #service name
-            # - PGDATABASE=postgres #default database
-            # - PGPASSWORD=postgres_password
-            # - PGPORT=5432
+        ports:
+            - "4001:8081"
